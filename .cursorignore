@@ -1,0 +1,19 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+.history/
+.venv/
+env/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+.idea/
+cookies
+*.json
+logs/
+output/
+test_output/
+test_prompts/
+项目开发文档/
+.pytest_cache/

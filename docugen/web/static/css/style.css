@@ -1,0 +1,282 @@
+/* 基础样式 */
+:root {
+    --primary-color: #4a6cf7;
+    --primary-light: #d4e2ff;
+    --secondary-color: #6a7c94;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #17a2b8;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --gray-color: #e9ecef;
+    --body-bg: #f5f8ff;
+    --header-bg: #ffffff;
+    --panel-bg: #ffffff;
+    --border-color: #dee2e6;
+    --font-main: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部样式 */
+header {
+    background-color: var(--header-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* 面板通用样式 */
+section {
+    background-color: var(--panel-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* 状态面板 */
+.status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-info {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.project-info .label {
+    font-weight: bold;
+}
+
+.progress-container {
+    margin-bottom: 10px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: var(--gray-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-value {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.status-text {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* 文档列表 */
+.documents-list {
+    list-style: none;
+}
+
+.document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.document-item:last-child {
+    border-bottom: none;
+}
+
+.document-item:hover {
+    background-color: var(--primary-light);
+}
+
+.document-name {
+    font-weight: 500;
+}
+
+.document-status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-pending {
+    background-color: var(--gray-color);
+    color: var(--secondary-color);
+}
+
+.status-generating {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: var(--success-color);
+}
+
+.status-failed {
+    background-color: #f8d7da;
+    color: var(--danger-color);
+}
+
+/* 控制台输出 */
+.console-output {
+    background-color: #25282c;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.console-message {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+}
+
+.console-message .time {
+    color: #718096;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.console-message .text {
+    word-break: break-word;
+}
+
+.console-message.info .text {
+    color: #a0aec0;
+}
+
+.console-message.success .text {
+    color: #68d391;
+}
+
+.console-message.warning .text {
+    color: #f6ad55;
+}
+
+.console-message.error .text {
+    color: #fc8181;
+}
+
+/* 加载骨架 */
+.skeleton {
+    height: 40px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .status-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .project-info {
+        margin-top: 10px;
+    }
+    
+    .console-output {
+        height: 200px;
+    }
+}
+
+/* 状态颜色 */
+#generation-status.ready {
+    color: var(--secondary-color);
+}
+
+#generation-status.generating {
+    color: var(--primary-color);
+}
+
+#generation-status.completed {
+    color: var(--success-color);
+}
+
+#generation-status.failed {
+    color: var(--danger-color);
+}
+
+#generation-status.paused {
+    color: var(--warning-color);
+} 

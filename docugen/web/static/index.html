@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuGen AI - 文档生成可视化</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DocuGen AI</h1>
+            <p class="subtitle">智能文档生成可视化面板</p>
+        </header>
+
+        <main>
+            <section class="status-panel">
+                <div class="status-header">
+                    <h2>生成状态</h2>
+                    <div class="project-info">
+                        <span class="label">项目名称:</span>
+                        <span id="project-name">加载中...</span>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-text">
+                        <span>总体进度:</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-value" class="progress-value" style="width: 0%;"></div>
+                    </div>
+                    <div class="status-text">
+                        状态: <span id="generation-status">准备就绪</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="documents-panel">
+                <h2>文档生成进度</h2>
+                <ul id="documents-list" class="documents-list">
+                    <li class="document-item skeleton"></li>
+                    <li class="document-item skeleton"></li>
+                    <li class="document-item skeleton"></li>
+                    <li class="document-item skeleton"></li>
+                    <li class="document-item skeleton"></li>
+                    <li class="document-item skeleton"></li>
+                    <li class="document-item skeleton"></li>
+                </ul>
+            </section>
+
+            <section class="console-panel">
+                <h2>运行日志</h2>
+                <div id="console-output" class="console-output">
+                    <div class="console-message info">
+                        <span class="time">00:00:00</span>
+                        <span class="text">系统初始化中...</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>DocuGen AI - 智能文档生成助手 &copy; 2025</p>
+        </footer>
+    </div>
+</body>
+</html> 

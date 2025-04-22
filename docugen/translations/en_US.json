@@ -1,0 +1,54 @@
+{
+  "ui": {
+    "title": "DocuGen AI Document Generator",
+    "project_name": "Project Name",
+    "prompt_path": "Prompt Path",
+    "start_generation": "Start Generation",
+    "confirm_generation": "Confirm document generation?",
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "success": "Success",
+    "failure": "Failure",
+    "done": "Done",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "save_path": "Save Path",
+    "language": "Language",
+    "settings": "Settings",
+    "help": "Help",
+    "exit": "Exit"
+  },
+  "documents": {
+    "brainstorm": "Brainstorming Document",
+    "prd": "Product Requirements Document",
+    "workflow": "Application Workflow Document",
+    "tech_stack": "Technology Stack Document",
+    "frontend": "Frontend Design Document",
+    "backend": "Backend Design Document",
+    "dev_plan": "Development Plan"
+  },
+  "status": {
+    "generating": "Generating",
+    "validating": "Validating",
+    "exporting": "Exporting",
+    "completed": "Completed",
+    "failed": "Failed",
+    "paused": "Paused"
+  },
+  "errors": {
+    "file_not_found": "File not found",
+    "permission_denied": "Permission denied",
+    "invalid_input": "Invalid input",
+    "api_error": "API error",
+    "timeout": "Operation timeout",
+    "validation_failed": "Validation failed",
+    "unknown": "Unknown error"
+  },
+  "prompts": {
+    "default_title": "Document Generator Prompt",
+    "system_role": "You are a professional document writing assistant",
+    "user_instruction": "Please generate a complete document based on the following information:"
+  }
+}
