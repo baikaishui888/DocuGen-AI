@@ -150,5 +150,8 @@ docugen/
 本项目采用MIT许可证。详见LICENSE文件。
 
 ## 最后更新
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=baikaishui888/DocuGen-AI.git&type=Date)](https://www.star-history.com/#baikaishui888/DocuGen-AI.git&Date)
 
 - 更新时间：[2025-04-22 14:39] 
